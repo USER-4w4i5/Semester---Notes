@@ -1,5 +1,5 @@
 # Chapter 5: Concurrency
-### Key terms related to concurrency
+## Key terms related to concurrency
 - Atomic operation
 	- Function/operation implemented as a sequence of one or more instructions that appears to be indivisible
 	- No other process can see the intermediate state or interrupt the operation
@@ -23,3 +23,5 @@
 ## Mutual Exclusion
 ## Semaphores
 ## Message Passing
+
+sruff
