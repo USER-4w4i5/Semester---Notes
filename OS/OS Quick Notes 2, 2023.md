@@ -19,7 +19,7 @@
 		- If Group A and Group B have 50% share of the processor then Group A will run for one and Group B will run for the regardless of the processes contained within a group
 			- Processes within a group will take turns executing when given the chance
 
-# UNIX SVR3 Scheduler
+## UNIX SVR3 Scheduler
 - Provide good response time for interactive users and ensure low priority background tasks do not starve
 - Multilevel Feedback using Round robin
 - Priority is recomputed once per second
