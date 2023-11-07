@@ -1,3 +1,10 @@
+# Chapter 9: Scheduling
+## Fair Share Scheduling
+## Traditional UNIX Scheduling
+
+
+
+---
 # Chapter 5: Concurrency
 ## Key terms related to concurrency
 - **Atomic operation**
@@ -570,3 +577,7 @@ Valve's Source Engine is just one example of how multithreading and multicore pr
         - Multithreaded rendering and image processing.
 - **Error Handling:**
     - GCD provides mechanisms for error handling and ensures that exceptions and crashes do not compromise the entire application.
+
+
+
+---
