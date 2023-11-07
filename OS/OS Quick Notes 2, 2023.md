@@ -104,24 +104,24 @@
     - Disabling interrupts globally may have a significant impact on system responsiveness.
     - It should be used with caution, especially in real-time systems or systems with strict timing requirements.
 
-**Special Machine Instructions:**
+**Special Machine Instructions (Hardware Support):**
 
 - **Atomic Instructions:**
-  - Some modern CPUs provide atomic instructions that are executed in a single step without interruption.
-  - These instructions are designed for mutual exclusion and work as follows:
-    - **Test-And-Set:** This instruction reads a memory location and sets it to a particular value, all in one atomic step. It returns the previous value of the memory location.
-    - **Swap:** This instruction swaps the content of a memory location with a specified value atomically.
+	- Some modern CPUs provide atomic instructions that are executed in a single step without interruption.
+		- These instructions are designed for mutual exclusion and work as follows:
+			- **Test-And-Set:** This instruction reads a memory location and sets it to a particular value, all in one atomic step. It returns the previous value of the memory location.
+			- **Swap:** This instruction swaps the content of a memory location with a specified value atomically.
 - **Usage for Mutual Exclusion:**
-  - Processes or threads can use these atomic instructions to protect their critical sections without disabling interrupts.
-  - Here's an example of using "Test-And-Set":
-    1. Process A reads a shared memory location using "Test-And-Set" and gets the previous value.
-    2. If the previous value is 0 (indicating no other process is in the critical section), process A enters the critical section.
-    3. If the previous value is 1, process A knows that another process is in the critical section and must wait.
+	- Processes or threads can use these atomic instructions to protect their critical sections without disabling interrupts.
+	- Here's an example of using "Test-And-Set":
+		1. Process A reads a shared memory location using "Test-And-Set" and gets the previous value.
+		2. If the previous value is 0 (indicating no other process is in the critical section), process A enters the critical section.
+		3. If the previous value is 1, process A knows that another process is in the critical section and must wait.
 
 - **Advantages and Limitations:**
-  - Using atomic instructions is highly efficient and does not disable interrupts.
-  - It is particularly useful in high-performance systems.
-  - However, it may not be available on all hardware platforms, and its usage should be carefully designed to avoid race conditions.
+	- Using atomic instructions is highly efficient and does not disable interrupts.
+	- It is particularly useful in high-performance systems.
+	- However, it may not be available on all hardware platforms, and its usage should be carefully designed to avoid race conditions.
 
 ## Semaphores
 
