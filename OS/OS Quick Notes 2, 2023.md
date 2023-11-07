@@ -19,7 +19,9 @@
 - Race Condition
 	- Situation, where multiple threads/processes read and write shared resources
 - Starvation
+	- Overlooked by scheduler, ready to run but never run
 ## Principles of Concurrency
+- 
 ## Mutual Exclusion
 ## Semaphores
 ## Message Passing
