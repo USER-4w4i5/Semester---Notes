@@ -158,6 +158,7 @@ Consumer:
 
 
 
+
   ```python
   Producer:
     while (true) {
@@ -193,6 +194,8 @@ Consumer:
 
 
 
+
+
   ```python
   Consumer:
     while (true) {
@@ -215,6 +218,7 @@ Consumer:
       consume_item(item);
     }
   ```
+
 
 
 
@@ -258,6 +262,7 @@ Suppose we have two processes, Process A and Process B, which need to access a s
 
 
 
+
   ```python
   while (true) {
     // Request permission to access the shared resource from Process B.
@@ -283,7 +288,9 @@ Suppose we have two processes, Process A and Process B, which need to access a s
 
 
 
+
 - **Process B:**
+
 
 
 
@@ -541,3 +548,25 @@ Valve's Source Engine is just one example of how multithreading and multicore pr
     - Threads within the same process are created using the `clone` system call.
     - Each thread has its own stack, registers, and program counter, but they share memory resources, making communication and data sharing efficient.
 ## 4.7 MAC OSX GCD (Grand Central Dispatch)
+
+- **Introduction:**
+    - Grand Central Dispatch (GCD) is a powerful and efficient API provided by macOS and iOS for managing concurrent and parallel execution of tasks.
+    - GCD simplifies the development of multithreaded applications by providing a high-level and easy-to-use interface for managing threads, queues, and synchronization.
+- **Key Concepts:**
+    - GCD introduces several key concepts:
+        - **Dispatch Queues:** Queues are used to manage the execution of tasks. GCD offers two types of queues:
+            - **Serial Queues:** Tasks are executed one at a time in the order they are added to the queue.
+            - **Concurrent Queues:** Tasks are executed concurrently, allowing multiple tasks to run in parallel.
+        - **Blocks:** GCD tasks are typically defined as blocks of code. These blocks are closures that encapsulate a unit of work.
+        - **Dispatch Groups:** Dispatch groups are used to track the completion of multiple tasks and synchronize their results.
+- **Main Benefits:**
+    - GCD abstracts the complexities of thread management, making it easier to write concurrent code without worrying about low-level details.
+    - It improves performance by efficiently utilizing available CPU cores, even on multi-core systems.
+    - GCD automatically scales the number of threads based on the available CPU resources and workload.
+- **Use Cases:**
+    - GCD is commonly used for parallelizing tasks in macOS and iOS applications, such as:
+        - Background tasks like file I/O and network operations.
+        - Implementing responsive and concurrent user interfaces.
+        - Multithreaded rendering and image processing.
+- **Error Handling:**
+    - GCD provides mechanisms for error handling and ensures that exceptions and crashes do not compromise the entire application.
