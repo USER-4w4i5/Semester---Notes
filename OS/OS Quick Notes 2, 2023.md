@@ -540,9 +540,9 @@ In this example, the two processes, A and B, coordinate their access to the shar
         - **Blocks:** GCD tasks are typically defined as blocks of code. These blocks are closures that encapsulate a unit of work.
         - **Dispatch Groups:** Dispatch groups are used to track the completion of multiple tasks and synchronize their results.
 - **Main Benefits:**
-    - GCD abstracts the complexities of thread management, making it easier to write concurrent code without worrying about low-level details.
-    - It improves performance by efficiently utilizing available CPU cores, even on multi-core systems.
-    - GCD automatically scales the number of threads based on the available CPU resources and workload.
+	- GCD abstracts the complexities of thread management, making it easier to write concurrent code without worrying about low-level details.
+	- It improves performance by efficiently utilizing available CPU cores, even on multi-core systems.
+	- GCD automatically scales the number of threads based on the available CPU resources and workload.
 - **Use Cases:**
 	- GCD is commonly used for parallelizing tasks in macOS and iOS applications, such as:
 		- Background tasks like file I/O and network operations.
