@@ -1,0 +1,93 @@
+# Social Media Marketing
+### Social Media
+- Social media is an internet-based form of communication
+- Used to Boost sales or bash competition
+	- Allows
+		- Conversations online
+		- Users to share information
+- #### Social Media Analytics
+	- ##### Importance of Data in Social Media Analytics:
+		- **Informed Decision-Making**: Social media data provides insights that help businesses make informed decisions about their online presence.
+		- **Audience Understanding**: It helps in understanding the demographics, preferences, and behaviors of the target audience.
+		- **Content Optimization**: Data allows for the optimization of content strategy by identifying what resonates with the audience.
+		- **Competitive Analysis**: Analyzing social media data can reveal insights into competitors' strategies and audience engagement.
+		- **ROI Measurement**: It enables the calculation of Return on Investment (ROI) for social media marketing efforts.
+		- **Crisis Management**: Social media analytics can be crucial for managing and mitigating PR crises.
+	- ##### Tools for Measuring Performance in Social Media Analytics:
+		- **Google Analytics**: Provides website traffic data, including social media referrals and user behavior.
+		- **Social Media Insights**: Each platform (e.g., Facebook Insights, Twitter Analytics) offers native analytics tools.
+		- **Hootsuite**: A social media management platform that includes analytics features.
+		- **Buffer**: Offers analytics for scheduling and tracking social media posts.
+		- **Sprout Social**: Provides in-depth analytics, engagement tracking, and reporting.
+		- **Brandwatch**: Focuses on social listening and sentiment analysis.
+		- **Mention**: Monitors social media mentions and provides analytics on brand reputation.
+		- **Keyhole**: Specializes in tracking hashtags and keyword analytics on social platforms.
+		- **Crimson Hexagon**: Offers advanced social media data analysis for insights into audience sentiment.
+- #### Key performance Indicators (KPI)
+	- **Definition**: KPIs are measurable values used to evaluate the effectiveness of an organization or a specific activity in achieving its objectives.
+	- **Purpose**: They provide a clear, quantifiable way to track progress toward goals and make informed decisions.
+	- **Types**: KPIs can vary widely based on the industry and goals but often include financial, customer, operational, and employee-related metrics.
+	- **Relevance**: KPIs should be directly aligned with an organization's strategic objectives and critical success factors.
+	- **SMART Criteria**: Effective KPIs are Specific, Measurable, Achievable, Relevant, and Time-bound.
+	- **Data Sources**: KPI data can be gathered from various sources, including internal databases, surveys, and third-party tools.
+	- **Visualization**: They are often visualized through charts, graphs, or dashboards for easy monitoring and analysis.
+	- **Benchmarking**: Comparing KPIs to industry benchmarks or historical data helps in assessing performance.
+	- **Responsibility**: Each KPI should have an owner or department responsible for its measurement and improvement.
+	- **Periodic Review**: KPIs should be reviewed regularly to ensure they remain relevant and aligned with organizational goals.
+	- **Adaptation**: Organizations may need to adjust KPIs based on changing circumstances or strategic shifts.
+- #### Types of Social Media Platforms
+	- FB, YT, Whatsapp, Instagram, Snapchat and etc
+- #### Failed and Successful Social Media Campaigns 
+	- Failed
+		- Reebok
+		- Sony - PSP white is coming
+		- De beers: A diamond is forever (1999)
+	- Successful
+		- Nike - Just do it
+		- Wendy's: where is the beef (1984)
+		- Procter & Gamble: Thank u mom (2012)
+- #### FMCGs (Fast Moving Consumer Goods)
+	- FMCGs refer to consumer products that are sold quickly and at a relatively low cost.
+	- They have a short shelf life and are consumed or replaced frequently.
+	- Common examples include food and beverages, toiletries, cleaning products, and personal care items.
+	- FMCG companies often focus on mass production and distribution to reach a wide consumer base.
+	- Branding and marketing play a crucial role in the success of FMCG products.
+	- These products are typically available in both online and offline retail channels.
+	- FMCGs are known for their stable demand, making them attractive to investors.
+- #### Positive Impact of Social Media
+	- For individuals
+		- Building Relationships and Staying Connected
+		- Finding Your voice (Help individuals build confidence, gain new communication skills, quickly spread positive and important messages)
+		- Showing Empathy and kindness
+		- Better Communication
+	- For brands
+		- Building a business
+		- Establishing Authority
+		- Driving Traffic to your website
+		- Enhancing the customer experience
+	- For students
+		- Learning and education
+		- Motivation young people
+		- Creativity 
+- #### Negative Impact of Social Media 
+- Inadequacy about Your Life/Appearance:
+	- Constant exposure to curated, idealized content can lead to feelings of inadequacy and comparison with others.
+	- People may feel pressure to present an unrealistically perfect image of their lives, causing stress and anxiety.
+- Fear of Missing Out & Social Media Addiction:
+	- The fear of missing out (FOMO) can lead to excessive use of social media to stay constantly connected.
+	- Social media addiction can disrupt daily life, impacting productivity and relationships.
+- Isolation:
+	- Paradoxically, excessive social media use can lead to feelings of isolation as real-world interactions decrease.
+	- People may substitute online connections for in-person relationships, which can lead to loneliness.
+- Depression & Anxiety:
+	- Negative experiences like cyberbullying or comparison can contribute to depression and anxiety.
+	- Constant exposure to negative news and online conflicts can worsen mental health.
+- Cyberbullying:
+	- Social media platforms can be breeding grounds for cyberbullying, which can cause severe emotional distress.
+	- Victims of cyberbullying may suffer in silence, fearing retaliation.
+- Security Blanket:
+	- Some individuals use social media as a coping mechanism, seeking validation and support through likes and comments.
+	- Overreliance on social media for emotional support may hinder real-world coping skills.
+- Masks Underlying Problems:
+	- People often use social media to distract themselves from underlying issues or emotional pain.
+	- Instead of addressing problems, they may suppress them by focusing on online activities.

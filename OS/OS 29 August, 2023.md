@@ -1,0 +1,122 @@
+# I/O Techniques
+
+- When an I/O Instruction is executed, a command is issued to the appropriate I/O Module
+	- #### Programmed I/O
+		- **Polling:** 
+			- CPU checks whenever Status/Flag of an I/O device is ready
+		- **Simple and straightforward:** 
+			- Programmed I/O is easy to implement and understand. 
+			- However, it can be inefficient as it ties up the CPU while waiting for I/O operations to complete.
+		- **CPU-intensive:** 
+			- CPU is actively involved in managing I/O, it can become a bottleneck when multiple I/O devices are present.
+	- #### Interrupt-Driven I/O
+		- **Interrupts:** 
+			- When an I/O device is ready, it sends an interrupt signal to the CPU
+			- This temporarily stops its current operation. The CPU then transfers data between the device and memory.
+			- `What is the priority level though?`
+		- **Efficiency:** 
+			- This approach allows the CPU to perform other tasks while waiting for I/O operations to complete.
+			- Compared to Programmed I/O, the CPU usage with this technique is reduced
+		- **Complexity:** 
+			- Implementing interrupt-driven I/O requires more complex hardware and software coordination to handle interrupts and context switching.
+			- Increases chances of missing an interrupt if the processor is busy with a higher level interrupt
+	- #### Direct Memory Access (DMA)
+		- Uses a DMA Controller
+		- **Reduced CPU involvement:** 
+			- The DMA controller takes over, allowing the CPU to focus on other tasks. 
+			- It directly transfers data to memory without involving the CPU
+			- However the CPU cannot access the memory bus at the same time as a DMA is fetching or writing data
+		- **High-speed data transfer:** 
+			- DMA is particularly useful for high-speed data transfers, such as large file copying or video streaming.
+		- **Complex setup:** 
+			- Setting up DMA requires careful configuration and coordination to ensure data integrity and prevent conflicts.
+
+## Symmetric Multiprocessor (SMP)
+- Definition
+	- A system with 2+ processors
+		- Share the same memory, system bus and I/O
+- Advantages 
+	- Increased throughput, more reliable as failure of one processor will not ruin others
+	- Coordinating processors is complex, large memory pool is required as all processors share the same memory
+## MultiCore Computer (MCC)
+- Definition
+	- Also known as chip multiprocessor
+	- Combines multiple cores on a single piece of silicon(die)
+	- L3 Cache seems shared between cores
+- Advantages
+	- Higher Clock speeds, Greater efficiency and less traffic. In comparison to a uni-core, multicore can tolerate more faults
+
+## Chapter 2: Operating System 
+### Operating Systems;
+- Interface b/w application & hardware
+- **Resource Management**
+	- Responsible for Controlling the Use of 
+		- CPU
+		- Processor Execution time
+		- I/O 
+			- Managed by the I/O controller linked to the OS
+		- Main Memory
+			- Holds the loaded OS and system software alongside loaded programs and data
+		- Secondary Memory
+			- Stores the OS, Programs and Data
+- **Instruction Set Architecture**
+	- Interface of OS and execution hardware
+	- Defines the set of instructions a computer's CPU can execute, enabled program execution on the CPU
+- **Application Binary Interface**
+	- Interface b/w OS and libraries
+- **Application Programming Interface**
+	- Interface b/w Application and libraries
+#### Stages/Level of evolution of OS
+- **Serial Processing**
+	- **Definition:** 
+		- Execution of tasks or instructions one after the other, sequentially.
+	- **Characteristics:**
+	    - Only one task is processed at a time.
+	    - Direct access to the CPU
+	    - No parallelism or multitasking.
+	    - Common in early computing.
+	- **Problems:**
+		- Scheduling
+			- Hard copy of a sign-up sheet was used to reserve timeslots in multiples of half an hour where a 45 min job will waste 15 mins of system run time or the user might not have enough time to resolve errors and run out of time
+		- Setup Time
+			- Setup sequences were long and slow, costing valuable processing time where if an error were to occur the user was forced to start again
+- **Simple Batch Processing**
+	- **Definition:** 
+		- Execution of a batch of similar tasks or jobs in a sequence.
+	- **Characteristics:**
+	    - Jobs are collected, processed together, and results are obtained at the end.
+	    - Fixed the wasted time cause by scheduling and job setup time
+	    - Common in early mainframe systems.
+	    - Limited interactivity.
+	    - Used a Monitor (BatchOS)
+		    - Which Managed
+			    - Interrupt Processing
+			    - Device Driver
+			    - Job Sequencing
+			    - Control language Interpretation
+		    - A part of monitor was always stored in memory aka the Resident Monitor
+			    - The RM would have a branching instruction that would branch out the processor execution to the given job and after job completion/error would branch back into the RM
+	- **Problems:**
+		- Job Control Language (JCL) in its early days allowed for access to the Batch OS's memory as well and therefore the concept of Memory Protection was introduced where the user program was executed in user mode and a kernel mode was also provided in which privileged instructions were executed
+		- A certain job in the batch could use up all system resources therefore a timer was started at program startup after which its expiry would mean the control would be returned back to the Monitor
+			- The time limit was a poll of 0.2s
+		- Processor was often left idle if a program was waiting for I/O
+			- This lead to the development of two multiprogram modes
+				- Time Sharing aka MultiProgrammed systems
+					- Each program was alloted a certain number of instructions to execute after which the monitor passed control onto the next program
+				- Time Slicing
+					- Each program was alloted a certain slice of the processors time to execute after which control was passed onto the next program
+- **Multi-programmed Systems**
+	- **Definition:** 
+		- A system that can manage and execute multiple programs concurrently.
+	- **Characteristics:**
+	    - Allows for better CPU utilization.
+	    - Several programs can be in memory at once.
+	    - Operating system handles program scheduling.
+- **Time Sharing Systems**
+	- **Definition:** 
+		- Multiple users or processes share a single computer's resources simultaneously.
+	- **Characteristics:**
+	    - Rapid switching between tasks (time slices).
+	    - Supports interactive computing.
+	    - Provides the illusion of dedicated resources for each user/process.
