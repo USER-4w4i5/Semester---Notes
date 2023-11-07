@@ -58,9 +58,9 @@
 - **Critical Section**
 	- Section of code that must not be executed while other processes are using the shared resources it has to use
 - **Deadlock**
-	- Two or more processes are unable to proceed as each is waiting on for one of the others to do something
+	- Two or more processes are unable to proceed as each is waiting on one of the other to do something
 - **Livelock**
-	- Two or more processes continuously change their states in response to each other without doing as useful work
+	- Two or more processes continuously change their states in response to each other without doing any useful work
 - **Mutual exclusion**
 	- Requirement, if a process accesses shared resources, no other process can use that shared resource i.e be in a critical section
 - **Race Condition**
@@ -68,8 +68,20 @@
 - **Starvation**
 	- Overlooked by scheduler, ready to run but never run
 ## Principles of Concurrency
--
+- Operating System Concerns
+	- Must be able to keep track of various processes
+	- Allocate/Deallocate resources for each active processes
+	- Protect the data and physical resources of each process against interference by other processes
+	- Ensure that the processes and outputs are independent of the processing speed
 ## Mutual Exclusion
+
+- **Requirements**
+	- Enforced
+	- Must halt without interfering with other processes
+	- No Deadlock/Starvation
+	- Must not be denied access to critical section when there is no other process using it
+	- No assumptions are made about relative process speeds or number of processes
+	- Remains in critical section for finite time only
 
 **Interrupt Disabling:**
 
@@ -212,6 +224,7 @@ Consumer:
 
 
 
+
   ```python
   Producer:
     while (true) {
@@ -234,6 +247,8 @@ Consumer:
       signal(full);
     }
   ```
+
+
 
 
 
@@ -297,6 +312,7 @@ Consumer:
 
 
 
+
   - The "wait" and "signal" operations, along with mutex locks, ensure that producers and consumers can work without violating mutual exclusion or buffer overflows/underflows.
 
 This solution using semaphores and mutex locks is a common approach to the Producer/Consumer problem. It ensures that producers and consumers operate safely and efficiently. If you have more specific questions or need further clarification, please let me know.
@@ -327,6 +343,7 @@ This solution using semaphores and mutex locks is a common approach to the Produ
 Suppose we have two processes, Process A and Process B, which need to access a shared resource using message passing for mutual exclusion:
 
 - **Process A:**
+
 
 
 
@@ -372,7 +389,9 @@ Suppose we have two processes, Process A and Process B, which need to access a s
 
 
 
+
 - **Process B:**
+
 
 
 
