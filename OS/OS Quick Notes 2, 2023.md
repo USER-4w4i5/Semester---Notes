@@ -1,7 +1,46 @@
 # Chapter 9: Scheduling
-## Fair Share Scheduling
+## Fair Share
+- Used in multi-user systems
+- Ensures each user gets it own fair share of system resources
+	- Weighted Fair Queuing
+	- Round Robin with Quotas
+- Formulas
+	- $$CPU_j(i) = \frac{CPU_j(i-1)}{2}$$
+	- $$GCPU_k(i) = \frac{GCPU_k(i-1)}{2}$$
+	- $$P_j(i)=Base_j+\frac{CPU_j(i)}{2}+\frac{GCPU_k(i)}{4W_k}$$
+	- Where
+		- CPUj(i) -> Processor util by process j thru interval i (CPU Count)
+		- GCPUj(i) -> Processor util by group k thru interval i (GCPU Count)
+		- Pj(i) -> Current Priority of process j at starting i
+		- Basej -> Base priority of process j
+		- Wk -> Weight assigned to group k, constraint that 0 < Wk <= 1 and sum of all Wk = Total weight which is 1
+- Patterns
+	- Grouping decides the 2^n order of execution
+		- If Group A and Group B have 50% share of the processor then Group A will run for one and Group B will run for the regardless of the processes contained within a group
+			- Processes within a group will take turns executing when given the chance
 
-## Traditional UNIX Scheduling
+# UNIX SVR3 Scheduler
+- Provide good response time for interactive users and ensure low priority background tasks do not starve
+- Multilevel Feedback using Round robin
+- Priority is recomputed once per second
+- Base priority is used to lock a process to that particular priority
+	- Order
+		- Swapper
+		- Block I/O
+		- File Manipulation
+		- Charecter I/O
+		- User Process
+- Formulas
+	- $$CPU_j(i) = \frac{CPU_j(i-1)}{2}$$
+	- $$P_{j(i)}=Base_{j} + \frac{CPU_j(i)}{2}+nice_j $$
+	- Where
+		- CPUj(i) -> Processor util by process j thru interval i (CPU Count)
+		- Pj(i) -> Current Priority of process j at starting i
+		- Basej -> Base priority of process j
+		- nicej -> user-controlled adjustment factor
+	- Pattern
+		- Found that if the processes have the same base priority and CPU count, the timeline for process A is offset by + 1 of the previous process
+
 
 
 
@@ -167,6 +206,7 @@ Consumer:
 
 
 
+
   ```python
   Producer:
     while (true) {
@@ -189,6 +229,8 @@ Consumer:
       signal(full);
     }
   ```
+
+
 
 
 
@@ -234,6 +276,7 @@ Consumer:
 
 
 
+
   - The "wait" and "signal" operations, along with mutex locks, ensure that producers and consumers can work without violating mutual exclusion or buffer overflows/underflows.
 
 This solution using semaphores and mutex locks is a common approach to the Producer/Consumer problem. It ensures that producers and consumers operate safely and efficiently. If you have more specific questions or need further clarification, please let me know.
@@ -271,6 +314,7 @@ Suppose we have two processes, Process A and Process B, which need to access a s
 
 
 
+
   ```python
   while (true) {
     // Request permission to access the shared resource from Process B.
@@ -297,7 +341,9 @@ Suppose we have two processes, Process A and Process B, which need to access a s
 
 
 
+
 - **Process B:**
+
 
 
 

@@ -43,8 +43,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "OS/OS Quick Notes 2, 2023.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "OS/OS Quick Notes 2, 2023.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "OS/OS Quick Notes 2, 2023.md"
               }
             }
           },
@@ -194,11 +193,11 @@
       "obsidian-trim-whitespace:Trim whitespace": false
     }
   },
-  "active": "7a5af055149165c5",
+  "active": "55891c263ab3d7a1",
   "lastOpenFiles": [
-    "OS/OS Quick Notes 2, 2023.md",
     "OS/OS 28 September, 2023.md",
     "README.md",
+    "OS/OS Quick Notes 2, 2023.md",
     "Oldgit/logs/refs/remotes/origin/main",
     "Oldgit/logs/refs/remotes/origin/HEAD",
     "Oldgit/refs/remotes/origin/main",
