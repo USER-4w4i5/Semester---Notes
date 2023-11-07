@@ -126,7 +126,7 @@
 ## Semaphores
 
 
-### **Mutex (Mutual Exclusion):**
+##### **Mutex (Mutual Exclusion):**
 
 - **Definition:**
 	- A mutex, short for "mutual exclusion," is a synchronization primitive used to protect critical sections in multithreaded or multiprocess systems.
