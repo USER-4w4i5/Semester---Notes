@@ -154,6 +154,10 @@ Consumer:
 
 
 
+
+
+
+
   ```python
   Producer:
     while (true) {
@@ -181,6 +185,14 @@ Consumer:
 
 
 
+
+
+
+
+
+
+
+
   ```python
   Consumer:
     while (true) {
@@ -203,6 +215,10 @@ Consumer:
       consume_item(item);
     }
   ```
+
+
+
+
 
 
 
@@ -238,6 +254,10 @@ Suppose we have two processes, Process A and Process B, which need to access a s
 - **Process A:**
 
 
+
+
+
+
   ```python
   while (true) {
     // Request permission to access the shared resource from Process B.
@@ -259,7 +279,15 @@ Suppose we have two processes, Process A and Process B, which need to access a s
 
 
 
+
+
+
+
 - **Process B:**
+
+
+
+
 
 
   ```python
@@ -483,5 +511,33 @@ Valve's Source Engine is just one example of how multithreading and multicore pr
     - SMP support allows Windows to distribute the execution of threads across multiple processors.
     - This results in better performance and responsiveness, especially for multithreaded applications.
 ## 4.5 Solaris Thread and SMP management
+- **Multithreaded Architecture:**
+    - Solaris is known for its multithreaded architecture, which allows multiple threads to exist within a single process.
+    - Threads in Solaris are often referred to as lightweight processes (LWPs) and are created and managed efficiently.
+- **Motivation:**
+    - Solaris introduced multithreading to improve system performance and responsiveness.
+    - Motivations include taking full advantage of SMP systems, better resource utilization, and more responsive applications.
+- **Process Structure:**
+    - In Solaris, each process consists of one or more LWPs (threads).
+    - LWPs share the same address space, file descriptors, and other process-related resources.
+    - Solaris allows processes to create LWPs as needed, which can be particularly useful for I/O-bound and parallel applications.
+- **Thread Execution:**
+    - Solaris threads execute in parallel on multiple processors in SMP systems.
+    - Threads can run in user mode or kernel mode, and they can be scheduled by the Solaris kernel or by user-level thread libraries.
+    - The goal is to efficiently distribute the workload across available processors.
+- **Interrupts as Threads:**
+    - Solaris treats interrupts as threads.
+    - When an interrupt occurs, it is handled by a dedicated interrupt thread.
+    - This approach allows Solaris to manage and prioritize interrupt handling, ensuring that interrupts do not disrupt the execution of user-level threads.
+
 ## 4.6 Linux Process and thread management
+
+- **Linux Tasks:**
+    - In Linux, processes and threads are represented as tasks.
+    - A task can be either a process or a thread.
+    - Each task has its own task structure and is identified by a unique task ID (PID).
+- **Linux Threads:**
+    - In Linux, threads are a type of task that share the same memory space, file descriptors, and other process-related resources.
+    - Threads within the same process are created using the `clone` system call.
+    - Each thread has its own stack, registers, and program counter, but they share memory resources, making communication and data sharing efficient.
 ## 4.7 MAC OSX GCD (Grand Central Dispatch)
