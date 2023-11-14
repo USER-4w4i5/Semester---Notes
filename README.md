@@ -61,6 +61,7 @@ Notes sponsored by chatGPT ;)
 | Week 10     | [26th Oct](CySec-2/CySec2%2026%20October,%202023.md)          | N/A        |                                                                    |
 | Week 11     | [31th Oct](CySec-2/CySec2%2031%20October,%202023.md)          | N/A        |                                                                    |
 | Week 11     | [1st Nov](CySec-2/CySec2%201%20November,%202023.md)           | N/A        |                                                                    |
+|             | [14th Nov](CySec-2/CySec2%2014%20November,%202023.md)                                                              |            |                                                                    |
 
 ## DB
 
